@@ -1,0 +1,11 @@
+nibabel==2.5.1
+argparse==1.4.0
+matplotlib==3.1.1
+batchgenerators==0.19.5
+torch==1.7.0
+fvcore==0.1.2.post20201030
+pandas==1.2.4
+numpy==1.19.2
+tqdm==4.59.0
+PyYAML==5.4.1
+scikit_learn==0.24.2

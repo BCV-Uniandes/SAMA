@@ -1,0 +1,56 @@
+# Configuration file of SAMA final method
+
+#### GENERAL CONFIGURATION PARAMETERS ####
+epochs: 2 #Epochs
+annealing: 1
+patience: 10 #Patience for the scheduler
+batch: 6 #Batch size
+amp: True #Mixed precision
+image_size: [256, 256, 256] #Image size
+data_aug: False
+seed: 3
+
+#### ROOT DIRECTORIES ####
+root: '/media/SSD2/mfroa/LUCAS' #Root directory to the data
+image_file: 'csv/ct_data.csv' #Directory path of the image file
+des_file: 'csv/descriptor_data.csv' #Directory path of the descriptor file
+folds_file: 'csv/rebalanced_folds.txt'
+
+#### CRITERION ('bce', 'focal', 'effective') ####
+criterion: 'bce'
+loss_args_dict:
+  pos_weight: None
+  resampling: True
+
+#### MODEL PARAMETERS ####
+model_params:
+  backbone: 'lucas'
+  filters: [32, 64, 128, 256, 256, 512] 
+  pi: 0.1
+  num_classes: 1 
+  btn_size: 4
+  scale_shift: False
+  vocab_size: 76
+  desc_output_size: 256 
+  final_mlp_list: [256]
+  fusion_output_filters: 512
+  num_filters_dyn: 16
+  broadcast: True
+  dmn: True
+  s_e: True
+  fusion_pointwise: True
+
+#### OPTIMIZER ####
+optimizer: Adam
+optim_args_dict:
+  lr: 1e-3 # Learning rate
+  weight_decay: 0.00001
+  amsgrad: True
+
+#### Paths for continue training ####
+load_path: 
+  1: '/home/mfroa/projects/SAMA/Pretrained_Model/Fold_1_SAMA'
+  2: '/home/mfroa/projects/SAMA/Pretrained_Model/Fold_2_SAMA'
+  3: '/home/mfroa/projects/SAMA/Pretrained_Model/Fold_3_SAMA'
+  4: '/home/mfroa/projects/SAMA/Pretrained_Model/Fold_4_SAMA'
+  5: '/home/mfroa/projects/SAMA/Pretrained_Model/Fold_5_SAMA'
