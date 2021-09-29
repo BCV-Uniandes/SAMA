@@ -1,0 +1,39 @@
+---
+
+port: 4000
+host: 0.0.0.0
+safe: false
+
+
+### site serving configuration ###
+exclude: [CNAME, README.md, .gitignore]
+permalink: /:title ## disables post output
+timezone: null
+lsi: false
+markdown: kramdown
+
+
+### content configuration ###
+title:       "SAMA: Spatially-Aware Multimodal Network with Attention for Early Lung Cancer Diagnosis"
+keywords:    "Multimodal data, Lung cancer, Dynamic filters, Computer Aided Diagnosis"
+description: "A multimodal lung cancer diagnosis method"
+source_link: "https://github.com/BCV-Uniandes/SAMA"
+favicon:     "img/favicon.ico"
+touch_icon:  "img/LOGO-CINFONIA-TRANSP.png"
+google_analytics_key:  ## put YOUR key here to enable tracking! (blank to disable)
+
+
+### template colors, used site-wide via css ###
+colors:
+  black:     '#111111'
+  white:     '#f8f8f8'
+  blue:      '#9AD2FF'
+  green:     '#C5FFB8'
+  purple:    '#C78EFF'
+  peach:     '#fbb4ae'
+  turquoise: '#b1dce0'
+  yellow:    '#FFC720'
+
+kramdown:
+  auto_ids:  false
+
