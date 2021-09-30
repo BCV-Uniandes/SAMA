@@ -27,12 +27,12 @@ google_analytics_key:  ## put YOUR key here to enable tracking! (blank to disabl
 colors:
   black:     '#111111'
   white:     '#f8f8f8'
-  blue:      '#9AD2FF'
+  blue:      '#bce1e2'
   green:     '#e2f2de'
   purple:    '#e4e0e5'
-  peach:     '#fbb4ae'
+  peach:     '#fce7e5'
   turquoise: '#b1dce0'
-  yellow:    '#FFC720'
+  yellow:    '#f4f4ad'
 
 kramdown:
   auto_ids:  false
